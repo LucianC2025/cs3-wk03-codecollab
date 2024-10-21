@@ -24,7 +24,11 @@ def view_recipes():
         print("No recipes available yet.")
         return
     
-    for i, recipe in enumerate(recipes, 1):
+    # Enumerate is a function for iteration thorugh a set
+    # the object in the enumerate function must be a sequence, an iterator, or some other object which supports iteration
+    # function returns a tuple
+    # has a counter that defaults at zero, and counts up in index
+    for i, recipe in enumerate(recipes, 1): 
         print(f"\nRecipe {i}: {recipe['recipe name']}")
         print(f"  Ingredients: {', '.join(recipe['ingredients'])}")
         print(f"  Cook time: {recipe['cook time']} minutes")
